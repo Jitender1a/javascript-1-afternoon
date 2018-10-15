@@ -68,7 +68,7 @@ var dog={
 //The value of bark should be a function that returns the string "Woof woof".
 
 dog.bark= function(){
-  console.log("Woof woof");
+  return "Woof woof";
 }
 //Store the result of invoking the bark method in a variable called ruff.
 
