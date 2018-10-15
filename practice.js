@@ -6,6 +6,9 @@
 //plus the value of the name parameter.
 
 //Code here
+function greeting(name){
+  return 'Hello, ' + name;
+}
 
 //////////////////PROBLEM 2////////////////////
 
@@ -14,27 +17,33 @@
 
 //Code Here
 
+var newGreeting= function(name){
+  return 'Hello, ' + name;
+}
 //////////////////PROBLEM 3////////////////////
 
 //Rewrite the function greeting as an arrow function.
 //Name it finalGreeting.
-
-//Code Here
+const finalGreeting=name=> "Hello, " + name; 
 
 //////////////////PROBLEM 4////////////////////
 
 //Create an array called groceries with the values
 //"apples", "milk", "eggs", "bread"
+ var groceries=["apples","milk","eggs","bread"]; 
 
-//Code Here
 
 //Write a function called doubleCheck that takes in an array
 //as a parameter.
+function doubleCheck(array){
+  return array; 
+}
+
 
 //If the array does not contain "chocolate", add "chocolate".
 //doubleCheck should return the array.
 
-//Code Here
+
 
 //////////////////PROBLEM 5////////////////////
 
@@ -43,21 +52,27 @@
 //name (a string), color: (a string), age (a number),
 //and goodBoy (a boolean).
 
-//Code Here
+var dog={
+  name:'john',
+  color: 'red',
+  age: 2, 
+  goodBoy: true 
+};
 
 //...access the dog's name from the object and assign it to a
 //variable called devMountainClassPet.
+  var devMountainClassPet=dog.name; 
 
-//Code Here
 
 //Add a method to dog called bark.
 //The value of bark should be a function that returns the string "Woof woof".
 
-//Code Here
-
+dog.bark= function(){
+  console.log("Woof woof");
+}
 //Store the result of invoking the bark method in a variable called ruff.
 
-//Code Here
+var ruff=dog.bark; 
 
 //////////////////PROBLEM 6////////////////////
 
@@ -70,7 +85,15 @@
 
 //Return mySum.
 
-//Code Here
+function looper(array){
+  var mySum=0;
+  for(var i=0; i<=array.length; i+=1){
+    if(array[i] % 2===1 || array[i]>=100){
+      mySum +=array[i];
+    }
+  }
+  return mySum; 
+}
 
 //////////////////PROBLEM 7////////////////////
 
@@ -83,13 +106,14 @@ function math(num1, num2, callback) {
 //Write a function called add that takes in two parameters and
 //returns the result of adding them together.
 
-//Code Here
+function add(num1,num2){
+  return num1+num2; 
+}
 
 //Now invoke math, passing in the numbers 3 and 4, and your add function,
 //storing the result in the variable mathSum.
 
-//Code Here
-
+var mathSum=math(3,4,add)
 //////////////////PROBLEM 8////////////////////
 
 //Write a function called invoker that takes in one paramter, a callback function.
